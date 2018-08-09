@@ -8,7 +8,15 @@
 
 int main(void)
 {
-    // Your code here
+    int x = 100;
+    printf("Parent x is: %d\n", x);
+
+    int fork();
+
+    if (fork() == 0)
+        printf("Child has x = %d\n", ++x);
+    else
+        printf("Parent has x = %d\n", --x);
 
     return 0;
 }

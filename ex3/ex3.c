@@ -9,7 +9,15 @@
 
 int main(void)
 {
-    // Your code here
+  int fb = fork();
+  int wc = waitpid();
+
+  if (fb == 1)
+      printf("Hello from Child!\n");
+
+  // parent process because return value non-zero.
+  else
+      printf("Hello from Parent!\n");
 
     return 0;
 }
